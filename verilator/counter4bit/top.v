@@ -34,11 +34,7 @@ module top (
         .q_bar(jk1_q_bar_unused)
     );
     
-    andgate and0(
-        .a(q0),
-        .b(q1),
-        .result(and0_out)
-    );
+    and and0(and0_out, q0, q1);
 
     jk jk2(
         .clk(clk),
@@ -49,11 +45,7 @@ module top (
         .q_bar(jk2_q_bar_unused)
     );
  
-     andgate and1(
-        .a(q1),
-        .b(q2),
-        .result(and1_out)
-    );
+    and and1(and1_out, q1, q2);
     
     jk jk3(
         .clk(clk),
